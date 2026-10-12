@@ -1,1 +1,0 @@
-# RGB-Thermal-Physiology-Detection
