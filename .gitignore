@@ -1,1 +1,12 @@
 docs/RGB_Thermal_Systematic_Review_IEEE.pdf
+datasets/*
+!datasets/README.md
+!datasets/post_tka_wound/
+datasets/post_tka_wound/*
+!datasets/post_tka_wound/README.md
+!datasets/post_tka_wound/manifest.template.json
+.venv/
+outputs/*
+!outputs/README.md
+__pycache__/
+*.py[cod]

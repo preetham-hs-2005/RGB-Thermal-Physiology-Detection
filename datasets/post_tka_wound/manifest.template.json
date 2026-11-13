@@ -1,0 +1,14 @@
+{
+  "dataset_id": "post_tka_wound_masks",
+  "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13691468/",
+  "access_status": "pending",
+  "access_terms_ref": "",
+  "class_ids": {
+    "background": 0,
+    "open_wound": 1,
+    "granulation": 2,
+    "infection_associated_exudate": 3,
+    "necrosis": 4
+  },
+  "records": []
+}

@@ -1,0 +1,17 @@
+# Local research datasets
+
+Large downloaded source archives are kept here for local experiments and are excluded from Git. Do not add them to commits or redistribute them. Keep each source's license, DOI, checksum, and split identity with the dataset before extraction or training.
+
+Local research data (kept out of Git):
+
+- `stereothermolegs/pilot_split/`: 20 paired samples from each of four training participants and one held-out participant from Zenodo record [10.5281/zenodo.8289870](https://zenodo.org/records/8289870), CC BY-NC 4.0. `manifest.json` records source members and SHA-256. This is paired visible/thermal/depth posterior-leg data with propagated anatomy labels; not a clinical data source and not absolute radiometry.
+- `stereothermolegs/calibration/`: publisher `ir_1024x768.yml`, `rgbd_1920x1080.yml`, and `stereo_rgbd-ir.yml` calibration files. The sampled RGB and IRT frames have different resolutions; use the calibration and depth data to implement/check mapping.
+- `caltech_aerial_rgbt/`: labeled paired RGB-thermal set from CaltechDATA record [10.22002/cks6g-ps927](https://data.caltech.edu/records/cks6g-ps927), CC BY-NC 4.0. Outdoor aerial scene classes support a different alignment/segmentation domain; not a human health source.
+- `fda_face_oral_temperature/`: public deidentified measurement tables from the FDA/PhysioNet facial and oral temperature dataset. The GitHub repository provides CSV tables; it does not provide the paired image pixels. Use for statistical temperature-reference exploration only.
+- `post_tka_wound/`: project-side manifest template and handling instructions only. **No clinical images have been acquired.** Any approved cohort must remain excluded from Git and handled under its DUA; see `docs/POST_TKA_DATA_ACCESS_REQUEST.md` and `docs/DATASET_RESEARCH.md`.
+- `tricvi_c/`: TRICVI-C v2 public clinical chronic venous insufficiency dataset (DOI [10.17632/rf5m97cmm3.2](https://data.mendeley.com/datasets/rf5m97cmm3/2)), CC BY 4.0. All 1,284 source files (318,816,132 bytes) are downloaded and SHA-256 verified. Includes same-frame-ID visible RGB, false-color thermal JPEGs, numeric per-pixel Celsius CSVs, capture protocol, and a clinical workbook. Volunteer-to-FLIR class mapping is not yet verified; handle the workbook as sensitive clinical data. Not a wound-mask dataset; exact geometric registration still needs held-out validation.
+- `lutseg/`: LUTSeg public clinician-labelled chronic-ulcer dataset from [Hugging Face](https://huggingface.co/datasets/ksanchez84/LUTSeg), CC BY 4.0. Downloaded at commit `e5115d4b2e5ecfc727f530deca9f3b0d032fb4bb`; 141 RGB images / 39 pseudonymized patients, patient-level train/validation split, tissue masks, wound masks, and multi-expert annotations. RGB-only; no thermal measurements. Publisher checksum list has a README discrepancy documented in `docs/TR.md`.
+
+The Caltech RGB/thermal/fusion one-epoch smoke-test checkpoints and metrics are in ignored `outputs/caltech_rgbt_runs/`. Downloaded files and local verification state are recorded in `docs/DATASET_RESEARCH.md` and `docs/TR.md`.
+
+The offline review demonstrator is `outputs/baseline_review_demo/index.html` (build with `python scripts/build_review_demo.py`). It embeds one local TRICVI-C RGB/thermal/Celsius example and one LUTSeg RGB ground-truth wound-mask example. The source samples are separate cohorts, and the displayed TRICVI-C overlay is scale-only, not validated registration. The page is a data/visualization demonstrator, not model inference.

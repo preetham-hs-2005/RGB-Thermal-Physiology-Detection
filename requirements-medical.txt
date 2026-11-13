@@ -1,0 +1,4 @@
+# Optional requirements for the restricted clinical wound-mask pipeline.
+# Install a CUDA-compatible PyTorch build separately for GPU training.
+transformers>=4.45,<6
+tifffile>=2024.1
