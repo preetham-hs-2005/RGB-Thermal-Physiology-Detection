@@ -1,4 +1,6 @@
-# Optional requirements for the restricted clinical wound-mask pipeline.
-# Install a CUDA-compatible PyTorch build separately for GPU training.
-transformers>=4.45,<6
+# Optional dependencies for the transformer-based wound baselines and
+# restricted post-TKA clinical scaffold. PyTorch is supplied by the environment;
+# install a CUDA-compatible PyTorch build separately when GPU training is needed.
+transformers>=4.57,<5
+safetensors>=0.4
 tifffile>=2024.1

@@ -11,6 +11,7 @@ A multi-domain research project to combine RGB and thermal images for registrati
 - [Dataset research and acquisition plan](docs/DATASET_RESEARCH.md) — sourced candidate matrix, gaps, access questions, and staged data plan.
 - [Process and model design](docs/PROCESS_MODEL_DESIGN.md) — multi-domain data flow, alignment tiers, model comparisons, and training gates.
 - [Baseline review demo guide](docs/BASELINE_DEMO.md) — how to open and present the current offline data/model demonstrator.
+- [Running wound segmentation baseline](docs/BASELINE_MODEL.md) — trained transformer model, one-click desktop inference app, split, metrics, and limits.
 - [Architecture proposal](docs/RGB_Thermal_Architecture.md) — the older knee-specific design; consult the PDF-led requirements where they differ.
 - [Agent working agreement](AGENTS.md) — reading order and documentation update rules.
 
